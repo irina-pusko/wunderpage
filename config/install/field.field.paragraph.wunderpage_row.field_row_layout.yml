@@ -1,0 +1,21 @@
+uuid: 2e40108b-f3b0-4b4f-9a00-a8232e6be3da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_row_layout
+    - paragraphs.paragraphs_type.wunderpage_row
+  module:
+    - options
+id: paragraph.wunderpage_row.field_row_layout
+field_name: field_row_layout
+entity_type: paragraph
+bundle: wunderpage_row
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

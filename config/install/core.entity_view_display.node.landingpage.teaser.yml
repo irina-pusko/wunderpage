@@ -1,0 +1,19 @@
+uuid: a2345867-feaa-42d5-bd24-36a472766fa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landingpage.field_row_paragraph
+    - node.type.landingpage
+  module:
+    - user
+id: node.landingpage.teaser
+targetEntityType: node
+bundle: landingpage
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_row_paragraph: true

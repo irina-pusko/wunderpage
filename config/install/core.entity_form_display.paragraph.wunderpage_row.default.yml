@@ -1,0 +1,56 @@
+uuid: 528aa9f6-7bdf-48db-be00-c42e03b0d759
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wunderpage_row.field_row_align
+    - field.field.paragraph.wunderpage_row.field_row_background_color
+    - field.field.paragraph.wunderpage_row.field_row_background_image
+    - field.field.paragraph.wunderpage_row.field_row_column
+    - field.field.paragraph.wunderpage_row.field_row_layout
+    - paragraphs.paragraphs_type.wunderpage_row
+  module:
+    - image
+    - paragraphs
+id: paragraph.wunderpage_row.default
+targetEntityType: paragraph
+bundle: wunderpage_row
+mode: default
+content:
+  field_row_align:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_row_background_color:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_row_background_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_row_column:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_row_layout:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,30 @@
+uuid: 294fedae-2b98-44df-9e1b-273a8516b908
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_row_layout
+field_name: field_row_layout
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: grid-50
+      label: 'grid 50/50'
+    -
+      value: grid-25
+      label: 'grid 25/25/25/25'
+    -
+      value: grid-30
+      label: 'grid 30/30/30'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

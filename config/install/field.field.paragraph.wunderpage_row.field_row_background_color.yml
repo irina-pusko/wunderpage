@@ -1,0 +1,19 @@
+uuid: b228ea38-7ffa-459e-9325-373af22b6027
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_row_background_color
+    - paragraphs.paragraphs_type.wunderpage_row
+id: paragraph.wunderpage_row.field_row_background_color
+field_name: field_row_background_color
+entity_type: paragraph
+bundle: wunderpage_row
+label: 'Background color'
+description: 'Hexadecimal colour code, e.g., #333666'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

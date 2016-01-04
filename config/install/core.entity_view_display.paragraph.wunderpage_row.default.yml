@@ -1,0 +1,58 @@
+uuid: f8d3e196-221e-4a10-a100-af5755f262cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wunderpage_row.field_row_align
+    - field.field.paragraph.wunderpage_row.field_row_background_color
+    - field.field.paragraph.wunderpage_row.field_row_background_image
+    - field.field.paragraph.wunderpage_row.field_row_column
+    - field.field.paragraph.wunderpage_row.field_row_layout
+    - paragraphs.paragraphs_type.wunderpage_row
+  module:
+    - entity_reference_revisions
+    - image
+    - options
+id: paragraph.wunderpage_row.default
+targetEntityType: paragraph
+bundle: wunderpage_row
+mode: default
+content:
+  field_row_align:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_row_background_color:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_row_background_image:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_row_column:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_row_layout:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+hidden:
+  created: true
+  uid: true
