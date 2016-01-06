@@ -1,0 +1,14 @@
+uuid: 97184e55-e0c3-4509-aa60-966a86406300
+langcode: en
+status: true
+dependencies: {  }
+name: wunderpage_1024x768
+label: 'wunderpage 1024x768'
+effects:
+  4f51df22-26a1-40ef-8d07-7f58e780fb88:
+    uuid: 4f51df22-26a1-40ef-8d07-7f58e780fb88
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1024
+      height: 768

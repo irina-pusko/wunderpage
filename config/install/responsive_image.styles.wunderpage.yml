@@ -1,0 +1,30 @@
+uuid: f999ada4-a38d-40fd-9900-ab097159058c
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.wunderpage_1024x768
+    - image.style.wunderpage_1800x1300
+    - image.style.wunderpage_768x576
+  module:
+    - wunderpage
+id: wunderpage
+label: wunderpage
+image_style_mappings:
+  -
+    breakpoint_id: wunderpage.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wunderpage_1800x1300
+  -
+    breakpoint_id: wunderpage.narrow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wunderpage_1024x768
+  -
+    breakpoint_id: wunderpage.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: wunderpage_768x576
+breakpoint_group: wunderpage
+fallback_image_style: '_empty image_'

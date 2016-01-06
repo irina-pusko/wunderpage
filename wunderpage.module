@@ -1,0 +1,20 @@
+<?php
+
+use Drupal\Core\Template\Attribute;
+use Drupal\node\Entity\Node;
+
+function wunderpage_theme_suggestions_page_alter(&$suggestions, $variables) {
+  /**
+   * @var \Drupal\node\Entity\Node $node
+   *    node from current request context
+   */
+  $node = \Drupal::request()->attributes->get('node');
+
+  // use any node context to suggest some templates
+  if (is_a($node, '\Drupal\node\Entity\Node')) {
+    // Node type project && page template
+    if ($node->getType()) {
+      $suggestions[] = 'page__' . 'node__type' . '_' . $node->getType();
+    }
+  }
+}

@@ -1,0 +1,14 @@
+uuid: 346ce2e4-7cdd-4d41-9a00-e17c238b7969
+langcode: en
+status: true
+dependencies: {  }
+name: wunderpage_1800x1300
+label: 'wunderpage 1800x1300'
+effects:
+  8448ed28-980e-453f-a500-a91652af3d18:
+    uuid: 8448ed28-980e-453f-a500-a91652af3d18
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1800
+      height: 1300
