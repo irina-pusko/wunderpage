@@ -5,3 +5,4 @@ core: 8.x
 package: wunder
 dependencies:
   - paragraphs
+  - responsive_image
