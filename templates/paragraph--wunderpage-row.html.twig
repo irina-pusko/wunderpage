@@ -44,10 +44,10 @@
 {% if bg_color or text_color %}
   style="
   {% if bg_color %}
-    background-color: #{% spaceless %}{{ bg_color }}{% endspaceless %};
+    background-color: {{ bg_color }};
   {% endif %}
   {% if text_color %}
-    color: #{% spaceless %}{{ text_color }}{% endspaceless %};
+    color: {{ text_color }};
   {% endif %}
   "
 {% endif %}

@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.wunderpage_row.field_row_background_image
     - field.field.paragraph.wunderpage_row.field_row_column
     - field.field.paragraph.wunderpage_row.field_row_layout
+    - field.field.paragraph.wunderpage_row.field_row_text_color
     - paragraphs.paragraphs_type.wunderpage_row
   module:
     - entity_reference_revisions
@@ -19,19 +20,19 @@ mode: default
 content:
   field_row_align:
     weight: 0
-    label: above
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
   field_row_background_color:
-    weight: 2
+    weight: 3
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_row_background_image:
-    weight: 3
+    weight: 4
     label: above
     settings:
       image_style: ''
@@ -40,18 +41,25 @@ content:
     type: image
   field_row_column:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: 2
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
   field_row_layout:
-    weight: 4
-    label: above
+    weight: 1
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
+  field_row_text_color:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
 hidden:
   created: true
   uid: true

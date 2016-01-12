@@ -70,21 +70,10 @@
   <main role="main" class="l-main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    {% if page.sidebar_first %}
-      <aside class="l-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
     <div class="l-content">
       {{ page.content }}
     </div>
 
-    {% if page.sidebar_second %}
-      <aside class="l-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
   </main>
 
 </div>{# /.layout-container #}

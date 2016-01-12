@@ -47,10 +47,9 @@ function wunderpage_theme() {
         )
     ),
     // 'page__node__type_landingpage' => array(
-    //   //'template' => 'page--node--type-landingpage',
-    //   //'path' => 'modules/custom/wunderpage/templates',
-    //   //'render element' => 'page',
-    //   //'type' => 'module',
+    //   'preprocess functions' => array(
+    //     'template_preprocess_page',
+    //     )
     // ),
     'field__paragraph__wunderpage_row' => array(
       'preprocess functions' => array(

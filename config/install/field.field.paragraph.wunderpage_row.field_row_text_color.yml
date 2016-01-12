@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_row_text_color
+    - paragraphs.paragraphs_type.wunderpage_row
+id: paragraph.wunderpage_row.field_row_text_color
+field_name: field_row_text_color
+entity_type: paragraph
+bundle: wunderpage_row
+label: 'Text color'
+description: 'Hexadecimal colour code, e.g., #333666'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

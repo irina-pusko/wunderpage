@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.wunderpage_row.field_row_background_image
     - field.field.paragraph.wunderpage_row.field_row_column
     - field.field.paragraph.wunderpage_row.field_row_layout
+    - field.field.paragraph.wunderpage_row.field_row_text_color
     - paragraphs.paragraphs_type.wunderpage_row
   module:
     - image
@@ -22,14 +23,14 @@ content:
     third_party_settings: {  }
     type: options_select
   field_row_background_color:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_row_background_image:
-    weight: 3
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -37,7 +38,7 @@ content:
     type: image_image
   field_row_column:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 5
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -50,6 +51,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_row_text_color:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
 hidden:
   created: true
   uid: true
