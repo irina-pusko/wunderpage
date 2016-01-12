@@ -4,6 +4,8 @@ use Drupal\Core\Template\Attribute;
 use Drupal\node\Entity\Node;
 
 function wunderpage_theme_suggestions_page_alter(&$suggestions, $variables) {
+
+
   /**
    * @var \Drupal\node\Entity\Node $node
    *    node from current request context
@@ -18,3 +20,49 @@ function wunderpage_theme_suggestions_page_alter(&$suggestions, $variables) {
     }
   }
 }
+
+// function wunderpage_theme_registry_alter(&$theme_registry) {
+//   //kint($theme_registry);
+//   // // Kill the next/previous forum topic navigation links.
+//   // foreach ($theme_registry['forum_topic_navigation']['preprocess functions'] as $key => $value) {
+//   //   if ($value == 'template_preprocess_forum_topic_navigation') {
+//   //     unset($theme_registry['forum_topic_navigation']['preprocess functions'][$key]);
+//   //   }
+//   // }
+// }
+
+/**
+ * Implements hook_theme().
+ */
+function wunderpage_theme() {
+  return array(
+    'paragraph__wunderpage_row' => array(
+      'preprocess functions' => array(
+        'template_preprocess_paragraph',
+        )
+    ),
+    'paragraph__content_paragraph' => array(
+      'preprocess functions' => array(
+        'template_preprocess_paragraph',
+        )
+    ),
+    // 'page__node__type_landingpage' => array(
+    //   //'template' => 'page--node--type-landingpage',
+    //   //'path' => 'modules/custom/wunderpage/templates',
+    //   //'render element' => 'page',
+    //   //'type' => 'module',
+    // ),
+    'field__paragraph__wunderpage_row' => array(
+      'preprocess functions' => array(
+        'template_preprocess_field',
+        )
+    ),
+    'field__field_content' => array(
+      'preprocess functions' => array(
+        'template_preprocess_field',
+        )
+    ),
+  );
+}
+
+

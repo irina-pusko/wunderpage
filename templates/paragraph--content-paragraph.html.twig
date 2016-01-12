@@ -36,26 +36,11 @@
  * @ingroup themeable
  */
 #}
-{% set bg_color =  content.field_row_background_color|render %}
-{% set text_color =  content.field_row_text_color|render %}
-{% set bg_image =  content.field_row_background_image|render %}
-
-<div class="cool l-landingpage__row {{ content.field_row_layout }} {{ content.field_row_align }}"
-{% if bg_color or text_color %}
-  style="
-  {% if bg_color %}
-    background-color: #{% spaceless %}{{ bg_color }}{% endspaceless %};
-  {% endif %}
-  {% if text_color %}
-    color: #{% spaceless %}{{ text_color }}{% endspaceless %};
-  {% endif %}
-  "
-{% endif %}
->
-{% if bg_image %}
-<div class="row-background">{{ bg_image }}</div>
-{% endif %}
-  <div class="l-wrapper">
-    {{ content|without('field_row_layout', 'field_row_background_color', 'field_row_align', 'field_row_background_image', 'field_row_text_color') }}
-  </div>
+{%
+set classes = [
+'column',
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <div class="column__content">{{ content.field_content }}</div>
 </div>
