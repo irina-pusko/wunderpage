@@ -5,31 +5,17 @@ use Drupal\node\Entity\Node;
 
 function wunderpage_theme_suggestions_page_alter(&$suggestions, $variables) {
 
+  $suggestions[] = 'page__node__type_landingpage';
 
-  /**
-   * @var \Drupal\node\Entity\Node $node
-   *    node from current request context
-   */
-  $node = \Drupal::request()->attributes->get('node');
+}
 
-  // use any node context to suggest some templates
-  if (is_a($node, '\Drupal\node\Entity\Node')) {
-    // Node type project && page template
-    if ($node->getType()) {
-      $suggestions[] = 'page__' . 'node__type' . '_' . $node->getType();
+function wunderpage_preprocess_page(&$variables) {
+  if (($node = \Drupal::routeMatch()->getParameter('node')) && $node instanceof \Drupal\node\NodeInterface) {
+    if($node->getType() == 'landingpage'){
+      $variables['#attached']['library'][] = 'wunderpage/base-style';
     }
   }
 }
-
-// function wunderpage_theme_registry_alter(&$theme_registry) {
-//   //kint($theme_registry);
-//   // // Kill the next/previous forum topic navigation links.
-//   // foreach ($theme_registry['forum_topic_navigation']['preprocess functions'] as $key => $value) {
-//   //   if ($value == 'template_preprocess_forum_topic_navigation') {
-//   //     unset($theme_registry['forum_topic_navigation']['preprocess functions'][$key]);
-//   //   }
-//   // }
-// }
 
 /**
  * Implements hook_theme().

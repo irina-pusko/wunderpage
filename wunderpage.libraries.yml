@@ -1,0 +1,5 @@
+base-style:
+  version: VERSION
+  css:
+    component:
+      css/wunderpage.css: {}
