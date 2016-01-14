@@ -62,3 +62,23 @@
 .l-landingpage__row .l-wrapper {
   padding: 40px 20px 10px 20px;
 }
+/*
+ Row layout
+*/
+@media (min-width: 700px){
+  .l-landingpage__row.grid-50 .column {
+    width: 48.57143%;
+    margin-right: 2.85714%;
+  }
+  .l-landingpage__row.grid-30 .column {
+    width: 31.42857%;
+    margin-right: 2.85714%;
+  }
+  .l-landingpage__row.grid-25 .column {
+    width: 22.85714%;
+    margin-right: 2.85714%;
+  }
+}
+.l-landingpage__row .column:last-child {
+    margin-right: 0;
+}

@@ -32,6 +32,11 @@ function wunderpage_theme() {
         'template_preprocess_paragraph',
         )
     ),
+    'paragraph__menu_list_paragraph' => array(
+      'preprocess functions' => array(
+        'template_preprocess_paragraph',
+        )
+    ),
     // 'page__node__type_landingpage' => array(
     //   'preprocess functions' => array(
     //     'template_preprocess_page',

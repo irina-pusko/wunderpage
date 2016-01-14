@@ -1,0 +1,5 @@
+langcode: en
+status: true
+dependencies: {  }
+id: menu_list_paragraph
+label: 'Menu list'

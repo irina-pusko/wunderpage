@@ -21,6 +21,7 @@ settings:
   handler_settings:
     target_bundles:
       content_paragraph: content_paragraph
+      menu_list_paragraph: menu_list_paragraph
     target_bundles_drag_drop:
       content_paragraph:
         enabled: true
@@ -28,4 +29,7 @@ settings:
       wunderpage_row:
         weight: 4
         enabled: false
+      menu_list_paragraph:
+        enabled: true
+        weight: 5
 field_type: entity_reference_revisions

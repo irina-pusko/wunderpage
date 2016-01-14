@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_menu_item_link
+    - paragraphs.paragraphs_type.menu_list_paragraph
+  module:
+    - link
+id: paragraph.menu_list_paragraph.field_menu_item_link
+field_name: field_menu_item_link
+entity_type: paragraph
+bundle: menu_list_paragraph
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
