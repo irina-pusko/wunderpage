@@ -39,9 +39,10 @@
 {%
 set classes = [
 'column',
+'hero-card',
 ]
 %}
 <div{{ attributes.addClass(classes) }}>
   <h2>{{ content.field_column_title }}</h2>
-  <div class="column__content">{{ content.field_menu_item_link }}</div>
+  <div class="column__content">{{ content.field_content }}</div>
 </div>

@@ -4,9 +4,11 @@ use Drupal\Core\Template\Attribute;
 use Drupal\node\Entity\Node;
 
 function wunderpage_theme_suggestions_page_alter(&$suggestions, $variables) {
-
   $suggestions[] = 'page__node__type_landingpage';
+}
 
+function wunderpage_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'field__paragraph';
 }
 
 function wunderpage_preprocess_page(&$variables) {
@@ -37,17 +39,17 @@ function wunderpage_theme() {
         'template_preprocess_paragraph',
         )
     ),
+    'paragraph__hero_card_paragraph' => array(
+      'preprocess functions' => array(
+        'template_preprocess_paragraph',
+        )
+    ),
     // 'page__node__type_landingpage' => array(
     //   'preprocess functions' => array(
     //     'template_preprocess_page',
     //     )
     // ),
-    'field__paragraph__wunderpage_row' => array(
-      'preprocess functions' => array(
-        'template_preprocess_field',
-        )
-    ),
-    'field__field_content' => array(
+    'field__paragraph' => array(
       'preprocess functions' => array(
         'template_preprocess_field',
         )
