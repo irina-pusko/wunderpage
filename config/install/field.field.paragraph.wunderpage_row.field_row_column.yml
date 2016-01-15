@@ -6,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.wunderpage_row
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: gAxELdMN13j7TbuEO8LBaKO6HFr1uRLYwlOm5Uw8k_c
 id: paragraph.wunderpage_row.field_row_column
 field_name: field_row_column
 entity_type: paragraph
@@ -22,6 +24,7 @@ settings:
     target_bundles:
       content_paragraph: content_paragraph
       menu_list_paragraph: menu_list_paragraph
+      hero_card_paragraph: hero_card_paragraph
     target_bundles_drag_drop:
       content_paragraph:
         enabled: true
@@ -32,4 +35,7 @@ settings:
       menu_list_paragraph:
         enabled: true
         weight: 5
+      hero_card_paragraph:
+        enabled: true
+        weight: 6
 field_type: entity_reference_revisions

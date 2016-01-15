@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EYLZ-WJwShbjNZmPE2_REay6FvSb6BrP_CymIi8HksE
+id: hero_card_paragraph
+label: 'Hero card'

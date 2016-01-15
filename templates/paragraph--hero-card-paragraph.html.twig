@@ -36,13 +36,28 @@
  * @ingroup themeable
  */
 #}
+{% set bg_color =  content.field_card_background_color|render %}
+{% set text_color =  content.field_card_text_color|render %}
 {%
 set classes = [
 'column',
 'hero-card',
 ]
 %}
-<div{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}
+{% if bg_color or text_color %}
+  style="
+  {% if bg_color %}
+    background-color: {{ bg_color }};
+  {% endif %}
+  {% if text_color %}
+    color: {{ text_color }};
+  {% endif %}
+  "
+{% endif %}
+>
+  <div class="column__image">{{ content.field_card_image }}</div>
   <h2>{{ content.field_column_title }}</h2>
   <div class="column__content">{{ content.field_content }}</div>
+  <div class="column__actions">{{ content.field_card_hero_button }}</div>
 </div>

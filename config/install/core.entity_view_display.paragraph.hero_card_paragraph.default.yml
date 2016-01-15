@@ -1,0 +1,71 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_card_paragraph.field_card_background_color
+    - field.field.paragraph.hero_card_paragraph.field_card_hero_button
+    - field.field.paragraph.hero_card_paragraph.field_card_image
+    - field.field.paragraph.hero_card_paragraph.field_card_text_color
+    - field.field.paragraph.hero_card_paragraph.field_column_title
+    - field.field.paragraph.hero_card_paragraph.field_content
+    - paragraphs.paragraphs_type.hero_card_paragraph
+  module:
+    - image
+    - link
+    - text
+_core:
+  default_config_hash: 4C4EP1WTHAN6HaT8ul0jckdR4cGJRtaqCgMMPYoNgvc
+id: paragraph.hero_card_paragraph.default
+targetEntityType: paragraph
+bundle: hero_card_paragraph
+mode: default
+content:
+  field_card_background_color:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_card_hero_button:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_card_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_card_text_color:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_column_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_content:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden:
+  created: true
+  uid: true
