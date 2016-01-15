@@ -57,7 +57,9 @@ set classes = [
 {% endif %}
 >
   <div class="column__image">{{ content.field_card_image }}</div>
-  <h2>{{ content.field_column_title }}</h2>
-  <div class="column__content">{{ content.field_content }}</div>
+  <div class="column__content">
+    <h2>{{ content.field_column_title }}</h2>
+    {{ content.field_content }}
+  </div>
   <div class="column__actions">{{ content.field_card_hero_button }}</div>
 </div>

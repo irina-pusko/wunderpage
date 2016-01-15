@@ -45,6 +45,7 @@
   display: inline-block;
   width: 100%;
   margin-bottom: 30px;
+  text-align: left;
 }
 /*
  Row content align
@@ -81,4 +82,26 @@
 }
 .l-landingpage__row .column:last-child {
     margin-right: 0;
+}
+/*
+ Hero card
+*/
+.column.hero-card .column__content {
+  padding: 20px;
+}
+.column.hero-card .column__content h2 {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.column.hero-card .column__actions {
+  padding: 0 20px 20px 20px;
+}
+.column.hero-card .column__actions a {
+  display: block;
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border: 0;
+  border-radius: 3px;
+  color: #555;
+  text-decoration: none;
 }
