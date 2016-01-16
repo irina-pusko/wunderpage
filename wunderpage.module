@@ -19,6 +19,19 @@ function wunderpage_preprocess_page(&$variables) {
   }
 }
 
+function wunderpage_preprocess_paragraph(&$variables) {
+  // Task: find better way to get the field value
+  $block_id = $variables['content']['field_block_id'][0]['#context']['value'];
+  $variables['block_output'] = '';
+
+  if($block = \Drupal\block\Entity\Block::load($block_id)){
+    $variables['block_output'] = \Drupal::entityManager()
+  ->getViewBuilder('block')
+  ->view($block);
+  }
+
+}
+
 /**
  * Implements hook_theme().
  */
@@ -42,6 +55,12 @@ function wunderpage_theme() {
     'paragraph__hero_card_paragraph' => array(
       'preprocess functions' => array(
         'template_preprocess_paragraph',
+        )
+    ),
+    'paragraph__block_column_paragraph' => array(
+      'preprocess functions' => array(
+        'template_preprocess_paragraph',
+        'wunderpage_preprocess_paragraph',
         )
     ),
     // 'page__node__type_landingpage' => array(
